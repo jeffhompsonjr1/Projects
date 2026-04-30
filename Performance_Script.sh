@@ -13,6 +13,11 @@ echo -e "\t Performance Monitor Log - $TIMESTAMP" >> "$FILE"
 echo "" >> "$FILE"
 
 #Appended Commands
+echo -e "\n\t ================== DNF HISTORY  ======================\n" >> "$FILE"
+sudo dnf update
+dnf history >> "$FILE"
+
+
 echo -e "\n\t ================== JOURNAL ERRORS LAST 1 HOUR ======================\n" >> "$FILE"
 journalctl -p err --since "1 hour ago" >> "$FILE"
 
