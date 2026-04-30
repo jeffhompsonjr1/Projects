@@ -2,7 +2,11 @@
 
 # This is a script to gather and analyze daily performance of my linux systems.
 TIMESTAMP=$(date +%c)
-FILE="/home/sysadmin/Performance_Monitoring/PM_from_$TIMESTAMP.txt"
+FILE="/Performance_Monitoring/PM_from_$TIMESTAMP.txt"
+
+#Make the directory if it doesnt exist already.
+sudo mkdir -p /Performance_Monitoring/
+sudo chmod 777 /Performance_Monitoring/
 
 #Header of document
 echo -e "\t Performance Monitor Log - $TIMESTAMP" >> "$FILE"
