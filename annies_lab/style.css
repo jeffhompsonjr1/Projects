@@ -1,0 +1,363 @@
+:root {
+    --cream: #f7efe6;
+    --soft-cream: #fff8f0;
+    --blush: #d9a18f;
+    --terracotta: #a8644f;
+    --olive: #4f5835;
+    --sage: #8a9470;
+    --brown: #5a3f32;
+    --light-brown: #c9ad96;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--cream);
+    color: var(--brown);
+}
+
+.navbar {
+    height: 105px;
+    background: var(--soft-cream);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+    box-shadow: 0 2px 10px rgba(90, 63, 50, 0.08);
+}
+
+.logo span {
+    display: block;
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    color: var(--brown);
+    line-height: 34px;
+}
+
+.logo small {
+    letter-spacing: 6px;
+    font-family: 'Playfair Display', serif;
+    color: var(--terracotta);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2f2b25;
+    margin-left: 35px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.nav-links a.active {
+    color: var(--terracotta);
+    border-bottom: 2px solid var(--terracotta);
+    padding-bottom: 8px;
+}
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 70px 7%;
+    position: relative;
+    background:
+        radial-gradient(circle at 10% 40%, rgba(217, 161, 143, 0.35), transparent 18%),
+        radial-gradient(circle at 90% 25%, rgba(138, 148, 112, 0.35), transparent 20%),
+        linear-gradient(90deg, #f6eadf 0%, #f8efe7 50%, #d6c2ab 100%);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "✿";
+    position: absolute;
+    left: 40px;
+    top: 130px;
+    font-size: 220px;
+    color: rgba(168, 100, 79, 0.22);
+}
+
+.hero::after {
+    content: "❦";
+    position: absolute;
+    right: 70px;
+    bottom: 80px;
+    font-size: 170px;
+    color: rgba(79, 88, 53, 0.22);
+}
+
+.hero-content {
+    max-width: 520px;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 120px;
+    line-height: 90px;
+    margin: 0;
+    color: var(--olive);
+}
+
+.hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    letter-spacing: 12px;
+    margin: 20px 0;
+    color: var(--terracotta);
+}
+
+.tagline {
+    font-family: 'Dancing Script', cursive;
+    font-size: 34px;
+    color: var(--olive);
+}
+
+.hero-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #3d352f;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--olive);
+    color: white;
+    text-decoration: none;
+    padding: 15px 34px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: var(--terracotta);
+}
+
+.sketch-card {
+    width: 360px;
+    height: 470px;
+    background: rgba(255, 248, 240, 0.65);
+    border-radius: 12px;
+    padding: 25px;
+    transform: rotate(6deg);
+    box-shadow: 0 20px 45px rgba(90, 63, 50, 0.25);
+    z-index: 2;
+}
+
+.paper {
+    height: 100%;
+    background: #fbf3e8;
+    border: 1px solid #d7c3ad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.paper p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    color: var(--brown);
+}
+
+.paper span {
+    font-size: 90px;
+    color: var(--blush);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 80px 10%;
+    background: var(--soft-cream);
+}
+
+.about-image img {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--blush);
+    box-shadow: 0 15px 35px rgba(90, 63, 50, 0.15);
+}
+
+.about-text h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 55px;
+    color: var(--terracotta);
+    margin: 0;
+}
+
+.about-text h4 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--brown);
+}
+
+.about-text p {
+    line-height: 1.9;
+    max-width: 650px;
+}
+
+.secondary {
+    background: var(--terracotta);
+}
+
+.services-band {
+    background: var(--olive);
+    color: var(--soft-cream);
+    padding: 60px 6%;
+    text-align: center;
+}
+
+.services-band h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 52px;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    padding: 20px;
+}
+
+.icon {
+    width: 85px;
+    height: 85px;
+    border: 1px solid var(--blush);
+    border-radius: 50%;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.service-card h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.cta {
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at left, rgba(217, 161, 143, 0.35), transparent 20%),
+        radial-gradient(circle at right, rgba(138, 148, 112, 0.25), transparent 20%),
+        var(--cream);
+}
+
+.cta h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 55px;
+    color: var(--terracotta);
+    margin: 0;
+}
+
+footer {
+    background: var(--soft-cream);
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--brown);
+}
+
+.footer-logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 80px;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .sketch-card {
+        margin-top: 40px;
+        width: 280px;
+        height: 360px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.img-box {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
