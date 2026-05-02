@@ -1,0 +1,543 @@
+	 Performance Monitor Log - Sat 02 May 2026 06:44:12 AM CDT
+
+
+	 ================== DNF HISTORY  ======================
+
+ID     | Command line              | Date and time    | Action(s)      | Altered
+--------------------------------------------------------------------------------
+     6 | install pcp-pmda-docker   | 2026-05-01 23:52 | Install        |    6 EE
+     5 | update                    | 2026-04-30 07:12 | Upgrade        |    1 EE
+     4 | install python3-idle      | 2026-04-29 05:52 | Install        |    4   
+     3 | update                    | 2026-04-29 04:46 | I, U           |  148 E<
+     2 | install -y metasploit-fra | 2026-03-28 02:31 | Install        |    1 ><
+     1 |                           | 2026-03-28 02:05 | Install        | 1258 >E
+
+	================== FLATPAK APP LIST  ======================
+
+Visual Studio Code	com.visualstudio.code	1.118.1	stable	system
+VSCodium	com.vscodium.codium	1.112.01907	stable	system
+GitHub Desktop	io.github.shiftey.Desktop	3.4.13-linux1	stable	system
+LibreOffice	org.libreoffice.LibreOffice	26.2.3.2	stable	system
+
+	 ================== JOURNAL ERRORS LAST 1 HOUR ======================
+
+-- No entries --
+
+	 ==================== KERNEL ERRORS LAST 1 HOUR ======================
+
+-- No entries --
+
+	 =================== SSH AUTHENTICATION WARNINGS=====================
+
+-- No entries --
+
+	===== FAILED SYSTEMD SERVICES =====
+  UNIT                      LOAD   ACTIVE SUB    DESCRIPTION
+● run-vmblock\x2dfuse.mount loaded failed failed VMware vmblock Fuse Mount
+● mcelog.service            loaded failed failed Machine Check Exception Logging Daemon
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+2 loaded units listed.
+
+	 ================== DISK SPACE ======================
+
+Filesystem           Size  Used Avail Use% Mounted on
+/dev/mapper/cs-root   16G   13G  3.8G  77% /
+devtmpfs             5.4G     0  5.4G   0% /dev
+tmpfs                5.4G   84K  5.4G   1% /dev/shm
+tmpfs                2.2G   11M  2.2G   1% /run
+tmpfs                1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+/dev/sda2            2.0G  563M  1.4G  29% /boot
+tmpfs                1.1G  508K  1.1G   1% /run/user/1000
+tmpfs                1.1G   56K  1.1G   1% /run/user/0
+
+	 ================== MEMORY SPACE ======================
+
+               total        used        free      shared  buff/cache   available
+Mem:            10Gi       3.8Gi       3.8Gi        61Mi       3.4Gi       6.9Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+	 ================== VOLUME ALLOCATION ======================
+
+NAME        MAJ:MIN RM SIZE RO TYPE MOUNTPOINTS
+sda           8:0    0  20G  0 disk 
+├─sda1        8:1    0   1M  0 part 
+├─sda2        8:2    0   2G  0 part /boot
+└─sda3        8:3    0  18G  0 part 
+  ├─cs-root 253:0    0  16G  0 lvm  /
+  └─cs-swap 253:1    0   2G  0 lvm  [SWAP]
+sda1          8:1    0   1M  0 part 
+sda2          8:2    0   2G  0 part /boot
+sda3          8:3    0  18G  0 part 
+├─cs-root   253:0    0  16G  0 lvm  /
+└─cs-swap   253:1    0   2G  0 lvm  [SWAP]
+
+	 ================== TOP OUTPUT======================
+
+top - 06:44:17 up  2:36,  2 users,  load average: 0.10, 0.07, 0.07
+Tasks: 457 total,   1 running, 455 sleeping,   0 stopped,   1 zombie
+%Cpu(s):  0.4 us,  2.0 sy,  0.0 ni, 96.4 id,  0.0 wa,  1.2 hi,  0.0 si,  0.0 st 
+MiB Mem :  10977.1 total,   3895.5 free,   3936.6 used,   3517.4 buff/cache     
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   7040.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  13323 root      20   0  231592   5160   3056 R  12.5   0.0   0:00.06 top
+  10067 sysadmin  20   0 7174772 255320 107312 S   6.2   2.3   0:39.70 ptyxis
+      1 root      20   0   44724  37052  10984 S   0.0   0.3   0:06.59 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.30 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     12 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     14 root      20   0       0      0      0 I   0.0   0.0   0:00.03 kworker+
+     15 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     16 root      20   0       0      0      0 I   0.0   0.0   0:02.93 rcu_pre+
+     17 root      20   0       0      0      0 S   0.0   0.0   0:00.21 rcu_exp+
+     18 root      20   0       0      0      0 S   0.0   0.0   0:00.04 rcu_exp+
+     19 root      rt   0       0      0      0 S   0.0   0.0   0:00.11 migrati+
+     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0
+     22 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1
+     23 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     24 root      rt   0       0      0      0 S   0.0   0.0   0:01.35 migrati+
+     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     26 root      20   0       0      0      0 I   0.0   0.0   0:00.76 kworker+
+     27 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/2
+     29 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     30 root      rt   0       0      0      0 S   0.0   0.0   0:01.36 migrati+
+     31 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     33 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     34 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/3
+     35 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     36 root      rt   0       0      0      0 S   0.0   0.0   0:01.36 migrati+
+     37 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     39 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     40 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/4
+     41 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     42 root      rt   0       0      0      0 S   0.0   0.0   0:01.37 migrati+
+     43 root      20   0       0      0      0 S   0.0   0.0   0:00.01 ksoftir+
+     46 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/5
+     47 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     48 root      rt   0       0      0      0 S   0.0   0.0   0:01.36 migrati+
+     49 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     51 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     52 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/6
+     53 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     54 root      rt   0       0      0      0 S   0.0   0.0   0:01.36 migrati+
+     55 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     57 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     58 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/7
+     59 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     60 root      rt   0       0      0      0 S   0.0   0.0   0:01.36 migrati+
+     61 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     64 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/8
+     65 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     66 root      rt   0       0      0      0 S   0.0   0.0   0:01.38 migrati+
+     67 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     70 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/9
+     71 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     72 root      rt   0       0      0      0 S   0.0   0.0   0:01.38 migrati+
+     73 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     75 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     76 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/10
+     77 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     78 root      rt   0       0      0      0 S   0.0   0.0   0:01.38 migrati+
+     79 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     82 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/11
+     83 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     84 root      rt   0       0      0      0 S   0.0   0.0   0:01.39 migrati+
+     85 root      20   0       0      0      0 S   0.0   0.0   0:00.32 ksoftir+
+     88 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/12
+     89 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     90 root      rt   0       0      0      0 S   0.0   0.0   0:01.39 migrati+
+     91 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     93 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     94 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/13
+     95 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+     96 root      rt   0       0      0      0 S   0.0   0.0   0:01.39 migrati+
+     97 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+     99 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    100 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/14
+    101 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+    102 root      rt   0       0      0      0 S   0.0   0.0   0:01.36 migrati+
+    103 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+    105 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    106 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/15
+    107 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_in+
+    108 root      rt   0       0      0      0 S   0.0   0.0   0:01.39 migrati+
+    109 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftir+
+    111 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    115 root      20   0       0      0      0 I   0.0   0.0   0:07.53 kworker+
+    122 root      20   0       0      0      0 I   0.0   0.0   0:07.19 kworker+
+    133 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kdevtmp+
+    134 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    135 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+
+    136 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+
+    137 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tas+
+    138 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kauditd
+    139 root      20   0       0      0      0 S   0.0   0.0   0:00.05 khungta+
+    141 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_rea+
+    142 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    143 root      20   0       0      0      0 S   0.0   0.0   0:00.68 kcompac+
+    144 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd
+    145 root      39  19       0      0      0 S   0.0   0.0   0:09.49 khugepa+
+    146 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    147 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    148 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    149 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    150 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-a+
+    155 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    156 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    157 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    158 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    159 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdo+
+    162 root       0 -20       0      0      0 I   0.0   0.0   0:00.08 kworker+
+    165 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0
+    170 root      20   0       0      0      0 I   0.0   0.0   0:07.37 kworker+
+    193 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    198 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/24-+
+    199 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/25-+
+    200 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/26-+
+    201 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/27-+
+    202 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/28-+
+    203 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/29-+
+    204 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/30-+
+    205 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/31-+
+    206 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/32-+
+    207 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/33-+
+    208 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/34-+
+    209 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/35-+
+    210 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/36-+
+    211 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/37-+
+    212 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/38-+
+    213 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/39-+
+    214 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/40-+
+    215 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/41-+
+    216 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/42-+
+    217 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/43-+
+    218 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/44-+
+    219 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/45-+
+    220 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/46-+
+    221 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/47-+
+    222 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/48-+
+    223 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/49-+
+    224 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/50-+
+    225 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/51-+
+    226 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/52-+
+    227 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/53-+
+    228 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/54-+
+    229 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/55-+
+    230 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    231 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    232 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    234 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    235 root       0 -20       0      0      0 I   0.0   0.0   0:00.01 kworker+
+    236 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    241 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    248 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    249 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    250 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    251 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    285 root      20   0       0      0      0 I   0.0   0.0   0:06.49 kworker+
+    389 root       0 -20       0      0      0 I   0.0   0.0   0:00.11 kworker+
+    390 root       0 -20       0      0      0 I   0.0   0.0   0:00.09 kworker+
+    392 root       0 -20       0      0      0 I   0.0   0.0   0:00.07 kworker+
+    393 root       0 -20       0      0      0 I   0.0   0.0   0:00.09 kworker+
+    408 root       0 -20       0      0      0 I   0.0   0.0   0:00.02 kworker+
+    432 root       0 -20       0      0      0 I   0.0   0.0   0:00.07 kworker+
+    436 root       0 -20       0      0      0 I   0.0   0.0   0:00.08 kworker+
+    442 root       0 -20       0      0      0 I   0.0   0.0   0:00.17 kworker+
+    446 root       0 -20       0      0      0 I   0.0   0.0   0:00.20 kworker+
+    449 root       0 -20       0      0      0 I   0.0   0.0   0:00.09 kworker+
+    450 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    451 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    461 root       0 -20       0      0      0 I   0.0   0.0   0:00.05 kworker+
+    463 root       0 -20       0      0      0 I   0.0   0.0   0:00.06 kworker+
+    478 root       0 -20       0      0      0 I   0.0   0.0   0:00.13 kworker+
+    499 root       0 -20       0      0      0 I   0.0   0.0   0:00.02 kworker+
+    596 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    601 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    604 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    605 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    606 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    607 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    608 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    609 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    610 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    611 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    612 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    613 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    614 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    615 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    616 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    617 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    618 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    619 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    620 root       0 -20       0      0      0 S   0.0   0.0   0:00.00 bnx2i_t+
+    823 root       0 -20       0      0      0 I   0.0   0.0   0:00.05 kworker+
+    826 root      20   0       0      0      0 S   0.0   0.0   0:00.02 scsi_eh+
+    827 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    828 root      20   0       0      0      0 S   0.0   0.0   0:00.03 scsi_eh+
+    829 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    833 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    834 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    840 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    841 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    842 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    843 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    844 root      20   0       0      0      0 S   0.0   0.0   0:00.00 scsi_eh+
+    845 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    847 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    850 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/16-+
+    852 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    915 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    955 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    961 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    994 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    995 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    996 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    997 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    998 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+    999 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   1000 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   1001 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   1002 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   1003 root      20   0       0      0      0 S   0.0   0.0   0:04.92 xfsaild+
+   1081 root     -51   0       0      0      0 S   0.0   0.0   0:00.22 irq/56-+
+   1082 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/57-+
+   1083 root     -51   0       0      0      0 S   0.0   0.0   0:00.04 irq/58-+
+   1099 root      20   0   24972  10904   9228 S   0.0   0.1   0:00.65 systemd+
+   1138 root      20   0   15912   6092   5108 S   0.0   0.1   0:00.19 systemd+
+   1147 root      20   0   38176  13620   8204 S   0.0   0.1   0:00.54 systemd+
+   1234 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   1235 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   1236 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   1237 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   1238 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   1240 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   1241 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   1242 root      20   0       0      0      0 S   0.0   0.0   0:00.00 xfsaild+
+   1301 root      16  -4   94404   3468   2312 S   0.0   0.0   0:00.15 auditd
+   1303 root      16  -4    6176   2956   2576 S   0.0   0.0   0:00.08 sedispa+
+   1327 dbus      20   0    9036   4392   3488 S   0.0   0.0   0:00.09 dbus-br+
+   1344 dbus      20   0    7552   5592   2444 S   0.0   0.0   0:00.98 dbus-br+
+   1345 avahi     20   0    6172   4236   3828 S   0.0   0.0   0:00.10 avahi-d+
+   1346 chrony    20   0   84800   5572   4828 S   0.0   0.0   0:00.60 chronyd
+   1350 root      20   0   80564   3724   3344 S   0.0   0.0   0:01.38 irqbala+
+   1351 libstor+  20   0    2516   1884   1728 S   0.0   0.0   0:00.11 lsmd
+   1353 polkitd   20   0  382728  11004   7268 S   0.0   0.1   0:01.52 polkitd
+   1355 rtkit     21   1   86864   3152   2892 S   0.0   0.0   0:00.30 rtkit-d+
+   1357 root      20   0  530304   7408   6512 S   0.0   0.1   0:00.20 account+
+   1358 root      20   0  527756   6776   6112 S   0.0   0.1   0:00.09 switche+
+   1360 root      20   0   19936  11808   7624 S   0.0   0.1   0:00.65 systemd+
+   1361 root      20   0  541948  13208  10676 S   0.0   0.1   0:00.23 udisksd
+   1362 root      20   0  530520   7676   6496 S   0.0   0.1   0:00.15 upowerd
+   1363 root      20   0  239856   9976   8448 S   0.0   0.1   0:00.06 VGAuthS+
+   1364 root      20   0  463264   8832   7248 S   0.0   0.1   0:22.37 vmtoolsd
+   1371 avahi     20   0    6172   1688   1352 S   0.0   0.0   0:00.00 avahi-d+
+   1402 root      20   0       0      0      0 I   0.0   0.0   0:00.66 kworker+
+   1441 root      20   0  390064  12008  10168 S   0.0   0.1   0:00.17 ModemMa+
+   1444 root      20   0  360944  46368  19996 S   0.0   0.4   0:00.65 firewal+
+   1488 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   1492 root      39  19    4364   2956   2724 S   0.0   0.0   0:00.01 alsactl
+   1532 root      20   0  554504  20112  16948 S   0.0   0.2   0:00.71 Network+
+   1542 root      20   0  253068  10260   7896 S   0.0   0.1   0:00.09 cupsd
+   1543 root      20   0    9152   6944   5720 S   0.0   0.1   0:00.03 sshd
+   1554 root      20   0  489116  31020  15452 S   0.0   0.3   0:02.63 tuned
+   1565 root      20   0    4672   2772   2584 S   0.0   0.0   0:00.02 atd
+   1567 root      20   0  229728   3564   2708 S   0.0   0.0   0:00.05 crond
+   1569 root      20   0  531428   9132   8052 S   0.0   0.1   0:00.13 gdm
+   1612 root      20   0  162336   7432   6208 S   0.0   0.1   0:01.18 rsyslogd
+   1700 root      20   0  487636  28808  15060 S   0.0   0.3   0:01.36 tuned-p+
+   2467 colord    20   0  533900  11324   9416 S   0.0   0.1   0:00.14 colord
+   2690 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   2878 root      20   0   15312   5528   4584 S   0.0   0.0   0:00.09 wpa_sup+
+   3187 root      20   0  606444  10584   9052 S   0.0   0.1   0:00.14 gdm-ses+
+   3201 sysadmin  20   0   24492  16152  10676 S   0.0   0.1   0:00.89 systemd
+   3204 sysadmin  20   0   14268   2948   1632 S   0.0   0.0   0:00.00 (sd-pam)
+   3222 sysadmin  20   0  534448   7840   6708 S   0.0   0.1   0:00.09 gnome-k+
+   3232 sysadmin  20   0  453612   5944   5452 S   0.0   0.1   0:00.00 gdm-way+
+   3236 sysadmin  20   0    8676   3904   3452 S   0.0   0.0   0:00.04 dbus-br+
+   3240 sysadmin  20   0    6816   4856   2404 S   0.0   0.0   0:00.43 dbus-br+
+   3242 sysadmin  20   0  555396  13852  12020 S   0.0   0.1   0:00.03 gnome-s+
+   3293 sysadmin  20   0  307912   5072   4664 S   0.0   0.0   0:00.00 gnome-s+
+   3297 sysadmin  20   0  703688  15384  12908 S   0.0   0.1   0:00.16 gnome-s+
+   3322 sysadmin  20   0 7359636 468880 141788 S   0.0   4.2  21:53.20 gnome-s+
+   3331 sysadmin  20   0  535592   9024   7900 S   0.0   0.1   0:00.05 gvfsd
+   3337 sysadmin  20   0  677640   6940   6152 S   0.0   0.1   0:00.01 gvfsd-f+
+   3405 sysadmin  20   0  380368   7236   6504 S   0.0   0.1   0:00.02 at-spi-+
+   3411 sysadmin  20   0    8548   3800   3472 S   0.0   0.0   0:00.00 dbus-br+
+   3412 sysadmin  20   0    4772   2712   2368 S   0.0   0.0   0:00.02 dbus-br+
+   3413 sysadmin  20   0  233544   7024   6328 S   0.0   0.1   0:00.03 at-spi2+
+   3418 sysadmin  20   0  527248   6092   5584 S   0.0   0.1   0:00.01 xdg-per+
+   3422 sysadmin  20   0  663928  24568  19920 S   0.0   0.2   0:00.29 gnome-s+
+   3448 sysadmin  20   0 1370220  27072  22360 S   0.0   0.2   0:00.20 evoluti+
+   3469 sysadmin  20   0 2770516  27888  23032 S   0.0   0.2   0:00.09 gjs
+   3483 sysadmin  20   0  606740  11880   6600 S   0.0   0.1   0:07.89 ibus-da+
+   3486 sysadmin  20   0  601468   6496   5836 S   0.0   0.1   0:00.02 gsd-a11+
+   3490 sysadmin  20   0  780312  22992  19212 S   0.0   0.2   0:00.47 gsd-col+
+   3492 sysadmin  20   0  618256  10588   8972 S   0.0   0.1   0:00.03 gsd-dat+
+   3495 sysadmin  20   0  677788   8060   7024 S   0.0   0.1   0:00.23 gsd-hou+
+   3498 sysadmin  20   0  778868  22392  18728 S   0.0   0.2   0:00.09 gsd-key+
+   3505 sysadmin  20   0  924376  25352  21088 S   0.0   0.2   0:00.27 gsd-med+
+   3511 sysadmin  20   0  990100  46100  36784 S   0.0   0.4   0:00.28 evoluti+
+   3514 sysadmin  20   0  853708  23500  19584 S   0.0   0.2   0:00.19 gsd-pow+
+   3517 sysadmin  20   0  545556  12068  10032 S   0.0   0.1   0:00.06 gsd-pri+
+   3519 sysadmin  20   0  675424   6596   5876 S   0.0   0.1   0:00.02 gsd-rfk+
+   3523 sysadmin  20   0  305324   6928   5940 S   0.0   0.1   0:00.01 gsd-dis+
+   3535 sysadmin  20   0  527524   6032   5476 S   0.0   0.1   0:00.01 gsd-scr+
+   3542 sysadmin  20   0  759636  11352   9760 S   0.0   0.1   0:00.05 gsd-sha+
+   3544 sysadmin  20   0  506584  36760  30280 S   0.0   0.3   0:22.00 vmtoolsd
+   3545 sysadmin  20   0  603660   7896   6768 S   0.0   0.1   0:00.02 gsd-sma+
+   3551 sysadmin  20   0  608372   8700   7612 S   0.0   0.1   0:00.02 gsd-sou+
+   3555 sysadmin  20   0 1521136 451192  79300 S   0.0   4.0   0:26.07 gnome-s+
+   3573 sysadmin  20   0  677096   7036   6284 S   0.0   0.1   0:00.15 gsd-usb+
+   3587 sysadmin  20   0  854176  23600  18916 S   0.0   0.2   0:00.13 gsd-wac+
+   3631 sysadmin  20   0  528420   7252   6564 S   0.0   0.1   0:00.00 ibus-dc+
+   3632 sysadmin  20   0  789488  33916  20236 S   0.0   0.3   0:02.95 ibus-ex+
+   3689 sysadmin  20   0  528376   7052   6408 S   0.0   0.1   0:00.03 ibus-po+
+   3690 sysadmin  20   0  732388  22116  18656 S   0.0   0.2   0:00.04 goa-dae+
+   3691 sysadmin  20   0 3163728  28764  23116 S   0.0   0.3   0:00.16 gjs
+   3694 sysadmin  20   0 1111152  23680  19672 S   0.0   0.2   0:00.19 evoluti+
+   3695 sysadmin  20   0  612444  11904  10112 S   0.0   0.1   0:00.04 gvfs-ud+
+   3734 sysadmin  20   0  615568  10676   8972 S   0.0   0.1   0:01.17 goa-ide+
+   3742 sysadmin  20   0  527820   6296   5664 S   0.0   0.1   0:00.01 gvfs-mt+
+   3762 sysadmin  20   0 1037528  26676  22652 S   0.0   0.2   0:00.05 evoluti+
+   3765 sysadmin  20   0  529420   6932   6172 S   0.0   0.1   0:00.01 gvfs-gp+
+   3787 sysadmin  20   0  527516   6168   5556 S   0.0   0.1   0:00.01 gvfs-go+
+   3816 sysadmin  20   0  200936  52752  43864 S   0.0   0.5   0:00.27 Xwayland
+   3836 sysadmin  20   0  454720   7332   6440 S   0.0   0.1   0:02.96 ibus-en+
+   3853 sysadmin  20   0  323720  12884   8112 S   0.0   0.1   0:18.45 pipewire
+   3855 sysadmin  20   0  782800  24340  19132 S   0.0   0.2   0:00.78 wireplu+
+   3857 sysadmin  20   0  390456  11400   7076 S   0.0   0.1   0:00.32 pipewir+
+   3928 sysadmin  20   0  952948  63640  53920 S   0.0   0.6   0:00.39 gsd-xse+
+   3937 sysadmin  20   0  990796  16704  13140 S   0.0   0.1   0:00.18 xdg-des+
+   3955 sysadmin  20   0  902052   7792   6820 S   0.0   0.1   0:00.05 xdg-doc+
+   3977 root      20   0    2468   1924   1808 S   0.0   0.0   0:00.00 fusermo+
+   3997 sysadmin  20   0  243980  12260  10772 S   0.0   0.1   0:00.01 ibus-x11
+   4003 sysadmin  20   0  641720  15512  12940 S   0.0   0.1   0:00.06 gsd-pri+
+   4019 sysadmin  20   0 1095944  38296  29492 S   0.0   0.3   0:00.53 xdg-des+
+   4036 sysadmin  20   0 3300260 112440  70536 S   0.0   1.0   0:00.27 mutter-+
+   4089 sysadmin  20   0  780780  24364  19540 S   0.0   0.2   0:00.39 xdg-des+
+   4112 root      20   0  566608  26804  20520 S   0.0   0.2   0:00.82 fwupd
+   4227 sysadmin  20   0  527824   6724   6108 S   0.0   0.1   0:00.02 flatpak+
+   4232 sysadmin  20   0    4112    924    692 S   0.0   0.0   0:00.00 p11-kit+
+   4237 sysadmin  20   0    3596   2008   1848 S   0.0   0.0   0:00.00 bwrap
+   4238 sysadmin  20   0  453624   5900   5344 S   0.0   0.1   0:00.03 xdg-dbu+
+   4244 sysadmin  20   0    3604   1608   1336 S   0.0   0.0   0:00.03 bwrap
+   4253 sysadmin  20   0  550456  13516  11492 S   0.0   0.1   0:00.05 flatpak+
+   4271 sysadmin  20   0 1393.9g 235616 159528 S   0.0   2.1   1:02.14 code
+   4275 sysadmin  20   0   32.2g  52044  43372 S   0.0   0.5   0:00.07 code
+   4277 sysadmin  20   0       0      0      0 Z   0.0   0.0   0:00.00 zypak-s+
+   4279 sysadmin  20   0    5872   2008   1888 S   0.0   0.0   0:00.00 cat
+   4280 sysadmin  20   0    5872   2020   1896 S   0.0   0.0   0:00.00 cat
+   4281 sysadmin  20   0    3596   2032   1832 S   0.0   0.0   0:00.04 bwrap
+   4291 sysadmin  20   0    3604   1420   1160 S   0.0   0.0   0:00.02 bwrap
+   4292 sysadmin  20   0   32.2g  53524  44732 S   0.0   0.5   0:00.10 code
+   4309 sysadmin  20   0   32.0g   3868   3532 S   0.0   0.0   0:00.00 chrome_+
+   4323 sysadmin  20   0   32.7g 179352 113652 S   0.0   1.6   2:02.27 code
+   4336 sysadmin  20   0   32.3g  78964  67088 S   0.0   0.7   0:06.69 code
+   4378 sysadmin  20   0 1393.8g 473112 135944 S   0.0   4.2   7:15.05 code
+   4401 sysadmin  20   0   21176  19300   2268 S   0.0   0.2   0:00.93 p11-kit+
+   4402 sysadmin  20   0 1393.6g 154620  80816 S   0.0   1.4   0:15.62 code
+   4404 sysadmin  20   0 1393.6g 118444  78932 S   0.0   1.1   0:15.03 code
+   4434 sysadmin  20   0 1409.7g 118056  79104 S   0.0   1.1   0:45.82 code
+   4462 sysadmin  20   0 1395.3g 486668  87548 S   0.0   4.3   3:51.06 code
+   4499 sysadmin  20   0  454320   6304   5716 S   0.0   0.1   0:00.00 gvfsd-m+
+   4627 sysadmin  20   0  229388   5596   5028 S   0.0   0.0   0:00.03 dconf-s+
+   4669 root       0 -20       0      0      0 I   0.0   0.0   0:00.08 kworker+
+   4697 sysadmin  20   0  831028  10088   8632 S   0.0   0.1   0:00.06 gvfsd-t+
+   4718 sysadmin  39  19  950008  25872  15992 S   0.0   0.2   0:00.21 tracker+
+   4819 sysadmin  20   0  609820   9548   8232 S   0.0   0.1   0:00.02 gvfsd-r+
+   4850 sysadmin  20   0  610036   9864   8532 S   0.0   0.1   0:00.02 gvfsd-n+
+   4861 sysadmin  20   0  612040  10120   8792 S   0.0   0.1   0:00.03 gvfsd-d+
+   4867 sysadmin  20   0  609616   9392   8112 S   0.0   0.1   0:00.22 gvfsd-w+
+   4872 sysadmin  20   0  260188  30016  11036 S   0.0   0.3   0:00.46 wsdd
+   4873 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   4875 root      20   0       0      0      0 I   0.0   0.0   0:00.69 kworker+
+   4958 root      20   0       0      0      0 I   0.0   0.0   0:00.99 kworker+
+   4989 root      20   0       0      0      0 I   0.0   0.0   0:00.50 kworker+
+   4996 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   5082 sysadmin  20   0   39368   5248   4292 S   0.0   0.0   0:01.69 pet
+   5141 sysadmin  20   0    8124   4772   4160 S   0.0   0.0   0:00.00 sh
+   5397 sysadmin  20   0 1395.2g 445084  75944 S   0.0   4.0   1:43.08 code
+   5515 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   5663 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   5729 root      20   0       0      0      0 I   0.0   0.0   0:06.09 kworker+
+   6035 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   6049 root      20   0       0      0      0 I   0.0   0.0   0:00.52 kworker+
+   6173 root      20   0       0      0      0 I   0.0   0.0   0:02.02 kworker+
+   6451 root      20   0       0      0      0 I   0.0   0.0   0:00.36 kworker+
+   6456 root      20   0       0      0      0 I   0.0   0.0   0:00.42 kworker+
+   6541 sysadmin  20   0 1391.9g  87168  64068 S   0.0   0.8   0:00.57 code
+   6542 sysadmin  20   0 1391.9g  86172  63544 S   0.0   0.8   0:00.63 code
+   6601 sysadmin  20   0    1012    520    468 S   0.0   0.0   0:00.00 cataton+
+   6876 root      20   0       0      0      0 I   0.0   0.0   0:00.96 kworker+
+   7141 root      20   0       0      0      0 I   0.0   0.0   0:00.32 kworker+
+   7146 root      20   0       0      0      0 I   0.0   0.0   0:00.36 kworker+
+   8177 root      20   0       0      0      0 I   0.0   0.0   0:00.36 kworker+
+   9148 root      20   0       0      0      0 I   0.0   0.0   0:00.32 kworker+
+   9290 root      20   0       0      0      0 I   0.0   0.0   0:01.05 kworker+
+   9417 root      20   0       0      0      0 I   0.0   0.0   0:00.59 kworker+
+   9673 sysadmin  20   0    8124   4672   4060 S   0.0   0.0   0:00.00 sh
+   9755 sssd      20   0  243900   8120   6724 S   0.0   0.1   0:00.42 sssd_kcm
+   9774 root      20   0       0      0      0 I   0.0   0.0   0:00.69 kworker+
+   9808 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   9831 root      20   0       0      0      0 I   0.0   0.0   0:00.16 kworker+
+   9835 root      20   0       0      0      0 I   0.0   0.0   0:00.24 kworker+
+   9836 root      20   0       0      0      0 I   0.0   0.0   0:00.47 kworker+
+   9956 root      20   0       0      0      0 I   0.0   0.0   0:00.05 kworker+
+   9967 root      20   0       0      0      0 I   0.0   0.0   0:00.07 kworker+
+   9975 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   9976 root      20   0       0      0      0 I   0.0   0.0   0:00.06 kworker+
+   9977 root      20   0       0      0      0 I   0.0   0.0   0:00.03 kworker+
+   9993 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   9996 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+   9997 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  10001 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  10004 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  10005 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  10006 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  10009 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  10017 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  10020 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  10021 root      20   0       0      0      0 I   0.0   0.0   0:00.01 kworker+
+  10022 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  10075 sysadmin  20   0  377780   7072   6264 S   0.0   0.1   0:00.37 ptyxis-+
+  10177 sysadmin  20   0  230176   5836   3676 S   0.0   0.1   0:00.22 bash
+  10281 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  10464 root      20   0       0      0      0 I   0.0   0.0   0:00.01 kworker+
+  10924 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  11254 root      20   0       0      0      0 I   0.0   0.0   0:00.01 kworker+
+  11426 root      20   0       0      0      0 I   0.0   0.0   0:00.01 kworker+
+  11596 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  11597 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  11601 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  11602 root      20   0       0      0      0 I   0.0   0.0   0:00.01 kworker+
+  11605 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  11637 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  11653 sysadmin  20   0  230044   5696   3652 S   0.0   0.1   0:00.04 bash
+  11676 root      20   0  240956   8928   7412 S   0.0   0.1   0:00.11 sudo
+  11719 root      20   0   22524  14100  10760 S   0.0   0.1   0:00.34 systemd
+  11721 root      20   0   14264   3000   1688 S   0.0   0.0   0:00.00 (sd-pam)
+  11737 root      20   0  240956   3072   1560 S   0.0   0.0   0:00.00 sudo
+  11738 root      20   0  230160   5980   3824 S   0.0   0.1   0:00.07 bash
+  11786 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  11854 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  11858 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  12127 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  12752 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  13255 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker+
+  13266 root      20   0  228408   3404   3120 S   0.0   0.0   0:00.01 sh
+  13295 root      20   0   16504   6872   5836 S   0.0   0.1   0:00.00 systemd+
+  13297 root      20   0   16504   6876   5840 S   0.0   0.1   0:00.00 systemd+
+  13301 root      20   0   16504   6992   5952 S   0.0   0.1   0:00.00 systemd+

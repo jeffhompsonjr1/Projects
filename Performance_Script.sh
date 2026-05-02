@@ -17,6 +17,8 @@ echo -e "\n\t ================== DNF HISTORY  ======================\n" >> "$FIL
 sudo dnf update
 dnf history >> "$FILE"
 
+echo -e "\n\t================== FLATPAK APP LIST  ======================\n" >> "$FILE"
+flatpak list --app >> "$FILE"
 
 echo -e "\n\t ================== JOURNAL ERRORS LAST 1 HOUR ======================\n" >> "$FILE"
 journalctl -p err --since "1 hour ago" >> "$FILE"
