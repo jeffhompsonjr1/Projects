@@ -25,6 +25,25 @@ class Resturant:
         self.number_served += number
         print(f"Number of customers served: {self.number_served}")
 
+class IceCreamStand(Resturant):
+    """Initialize attributes about a Ice cream stand"""
+    def __init__(self, name, cusine='Ice Cream'):
+        super().__init__(name, cusine)
+        self.flavors = ['Chocolate','Vanilla','Strawberry']
+
+    def get_flavors(self):
+        print("They serve:")
+        for flavor in self.flavors:
+            print('\t',flavor)
+        return self.flavors
+      
+
+
+
+my_ice_cream = IceCreamStand("Rock n Roll")
+my_ice_cream.describe_resturant()
+my_ice_cream.get_flavors()
+
 
 my_resturant = Resturant('The Great Wall', 'Chinese')
 my_new_resturant = Resturant('La Bella Italia', 'Italian')

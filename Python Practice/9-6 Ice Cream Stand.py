@@ -26,29 +26,33 @@ class Resturant:
         print(f"Number of customers served: {self.number_served}")
 
 class IceCreamStand(Resturant):
-    """A Class representing a Ice Cream Stand"""
-    
-    def __init__(self, name, cuisine):
-        """Initialize attributes of the parent class"""
-        super().__init__(name, cuisine = 'Ice Cream')
-        self.flavors = ['vanilla', 'chocolate', 'strawberry']
-        
-    def show_flavors(self):
-        """Wirte a method that displays the Ice Cream stand flavors"""
-        print(f"{self.name} Ice Cream has the following flavors:")
+    """Initialize attributes about a Ice cream stand"""
+    def __init__(self, name, cusine='Ice Cream'):
+        super().__init__(name, cusine)
+        self.flavors = ['Chocolate','Vanilla','Strawberry']
+
+    def get_flavors(self):
+        print("They serve:")
         for flavor in self.flavors:
-            print("*", flavor.title())
+            print('\t',flavor)
+        return self.flavors
+      
+
+
+
+my_ice_cream = IceCreamStand("Rock n Roll")
+my_ice_cream.describe_resturant()
+my_ice_cream.get_flavors()
 
 
 my_resturant = Resturant('The Great Wall', 'Chinese')
 my_new_resturant = Resturant('La Bella Italia', 'Italian')
 my_new_favorite_resturant = Resturant('Sushi World', 'Japanese')
-kirahs_ice_cream_stand = IceCreamStand('Kirahs', 'Ice Cream')
 
 my_resturant.describe_resturant()
 my_new_resturant.describe_resturant()
 my_new_favorite_resturant.describe_resturant()
-kirahs_ice_cream_stand.show_flavors()
+
 my_new_resturant.number_served = 25
 print(my_new_resturant.number_served)
 

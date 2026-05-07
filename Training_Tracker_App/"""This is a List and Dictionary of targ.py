@@ -114,15 +114,23 @@ def calculate_score(evidence_count):
     else:
         return 5
 
-def show_skill_info():
+def update_multiple_skills():
     """ Function show info of completed task and update evidence count"""
     evidence_count = 0
-    print("Enter a tasks from the skills_list")
+    print("Enter a task(s) from the skills_list")
     """This loop prints the skills list"""
     for skills in skills_list:
         print(f'\t{skills}') 
     """This input captures the skill performed and evidence of task performed"""       
-    skill = input("Enter skill performed: ")
+    skills = input("Enter skill(s) performed: ")
+    assessed_skills = []
+    while skills != "done":
+        if skills in skills_list:
+            assessed_skills.append(skills)
+        else:
+            print(skills, "not found")
+            skills = input("")
+            
     print("Evidence types for", skill)
     if skill in skills_matrix:
         """info variable is the skill matrix key for the dictionary nested in the dictionary."""
@@ -143,13 +151,3 @@ def show_skill_info():
 
  
 show_skill_info()
-
-
-
-
-            
-
-
-        
-        
-        

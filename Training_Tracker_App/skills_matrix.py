@@ -1,3 +1,4 @@
+from datetime import datetime
 """This is a List and Dictionary of target skills and definitions"""
 
 skills_list = ("Linux Administration", "Windows Administration", "Networking", "Python Automation", "Bash Automation", "IaC / Terraform", "Ansible",
@@ -114,42 +115,45 @@ def calculate_score(evidence_count):
     else:
         return 5
 
-def show_skill_info():
-    """ Function show info of completed task and update evidence count"""
-    evidence_count = 0
-    print("Enter a tasks from the skills_list")
+def show_skills():
+    """ Function show info available skills"""
+    print("\n\tTraining Assessment Tool")
+    print("\nThe available skills are:")
     """This loop prints the skills list"""
     for skills in skills_list:
         print(f'\t{skills}') 
-    """This input captures the skill performed and evidence of task performed"""       
-    skill = input("Enter skill performed: ")
-    print("Evidence types for", skill)
-    if skill in skills_matrix:
-        """info variable is the skill matrix key for the dictionary nested in the dictionary."""
-        info = skills_matrix[skill]
-        for evidences in info['Evidence Types']:
-            print(f'\t{evidences}')
-        evidence = input("Enter evidence of task performed, type 'done' when finished: ")
-        while evidence != "done":
-            if evidence in info['Evidence Types']:      
-                info['Evidence Count'] += 1
-            evidence = input("Enter evidence of task performed, type 'done' when finished: ")
-        info['Current Score']=calculate_score(info['Evidence Count'])
-        print(f"Skill: {skill}\nDescription: {info['Description']}\nCurrent Score: {info['Current Score']}\nTarget Score: {info['Target Score']}\nEvidence Count: {info['Evidence Count']}")
-    else:
-        print(skill, "not found")
-    return evidence_count
 
+def collect_skills():
+    performed_skills = []
+    skill = input("\nEnter skills performed, press enter after each entry, write 'done' when finished: ")
 
+    while skill != "done":
+        if skill in skills_list:
+            performed_skills.append(skill)
+        else:
+            print(skill, "not found")
+
+        skill = input(":")
+
+    return performed_skills
+
+def update_selected_skills(performed_skills):
+    """This function takes the list of performed skills and updates each one"""
+    for skill in performed_skills:
+        if skill in skills_matrix:
+            """info variable is the skill matrix key for the dictionary nested in the dictionary."""
+            info = skills_matrix[skill]
+            info['Evidence Count'] += 1
+
+    print(f"\n\tSummary of Training Assessment")
+    for skill in performed_skills:
+        if skill in skills_matrix:
+            info = skills_matrix[skill]
+            info['Current Score'] = calculate_score(info['Evidence Count'])
+            print(f"\nSkill: {skill}\nDescription: {info['Description']}\nCurrent Score: {info['Current Score']}\nTarget Score: {info['Target Score']}\nEvidence Count: {info['Evidence Count']}")
+   
  
-show_skill_info()
+#show_skills()
+#performed_skills = collect_skills()
+#update_selected_skills(performed_skills)
 
-
-
-
-            
-
-
-        
-        
-        
