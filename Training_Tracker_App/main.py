@@ -14,3 +14,6 @@ annies_lab = TrainingItem(
 print(annies_lab.to_dict())
 print(annies_lab.summarize())
 update_selected_skills(annies_lab.skills_used)
+
+from storage import save_training_item # type: ignore
+save_training_item(annies_lab)
