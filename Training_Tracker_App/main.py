@@ -1,5 +1,6 @@
 from models import TrainingItem
-from skills_matrix import update_selected_skills
+from storage import save_training_item, save_skills_matrix
+from skills_matrix import update_selected_skills, skills_matrix
 
 annies_lab = TrainingItem(
     title="Annie's Lab nginx container",
